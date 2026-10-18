@@ -1,7 +1,7 @@
 [project]
 name = "python-flet-test"
 version = "0.1.0"
-description = "Flet 1.0.1+ Beispielprojekt: Imperativ, Deklarativ, Live-Eingabe"
+description = "Flet 1.0.1+ Beispielprojekt: Imperativ, Deklarativ"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
