@@ -1,0 +1,15 @@
+// .devcontainer/devcontainer.json
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/uv:1": {}
+  },
+  "postCreateCommand": "uv sync",
+  "forwardPorts": [8550],
+  "portsAttributes": {
+    "8550": { "label": "Flet App", "onAutoForward": "openPreview" }
+  },
+  "customizations": {
+    "vscode": { "extensions": ["ms-python.python"] }
+  }
+}git add .devcontainer
