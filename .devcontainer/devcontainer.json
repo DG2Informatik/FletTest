@@ -1,15 +1,42 @@
 // .devcontainer/devcontainer.json
 {
+  // Basis-Image mit Python 3.12
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
+
+  // uv nachinstallieren (im Basis-Image nicht enthalten)
   "features": {
     "ghcr.io/devcontainers-contrib/features/uv:1": {}
   },
-  "postCreateCommand": "uv sync",
+
+  // Nach dem Erstellen des Codespace:
+  // 1. LFS-Hooks vom Template entfernen (fixt den pre-push-Fehler dauerhaft)
+  // 2. Virtuelle Umgebung aus uv.lock aufbauen
+  "postCreateCommand": "git lfs uninstall 2>/dev/null; rm -f .git/hooks/pre-push .git/hooks/post-checkout .git/hooks/post-commit .git/hooks/post-merge; uv sync",
+
+  // Port für die Flet-Web-App weiterleiten
   "forwardPorts": [8550],
+
   "portsAttributes": {
-    "8550": { "label": "Flet App", "onAutoForward": "openPreview" }
+    "8550": {
+      "label": "Flet App",
+      "onAutoForward": "openPreview"
+    }
   },
+
   "customizations": {
-    "vscode": { "extensions": ["ms-python.python"] }
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylint"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/workspaces/${localWorkspaceFolderBasename}/.venv/bin/python"
+      }
+    }
+  },
+
+  // Den Commit-Autor sauber setzen (optional, sinnvoll für Schüler-Codespaces)
+  "remoteEnv": {
+    "GIT_EDITOR": "code --wait"
   }
 }
