@@ -5,31 +5,31 @@ import flet as ft
 
 @ft.component
 def ColorSwitcher() -> ft.Container:
-    is_black: bool
-    set_is_black: Any
-    is_black, set_is_black = ft.use_state(False)
+    is_white: bool
+    set_is_white: Any
+    is_white, set_is_white = ft.use_state(False)
 
-    btn_text: str = "Wechsel zu Schwarz" if not is_black else "Wechsel zu Rot"
-    btn_color: str = ft.Colors.BLACK if is_black else ft.Colors.RED
-    bg_color: str = ft.Colors.BLACK if is_black else ft.Colors.RED_900
+    btn_text: str = "Wechsel zu Weiß" if not is_white else "Wechsel zu Rot"
+    bg_color: str = ft.Colors.RED_900 if not is_white else ft.Colors.WHITE
+    title_color: str = ft.Colors.WHITE if not is_white else ft.Colors.BLACK
 
     def toggle_color(e: ft.ControlEvent) -> None:
-        set_is_black(not is_black)
+        set_is_white(not is_white)
 
     return ft.Container(
         content=ft.Stack(
             controls=[
                 ft.Text(
-                    "1. FC Nürnberg",
+                    "1. FC Bayern München",
                     size=48,
                     weight=ft.FontWeight.BOLD,
-                    color=ft.Colors.WHITE,
+                    color=title_color,
                     text_align=ft.TextAlign.CENTER,
                 ),
                 ft.Container(
                     content=ft.Button(
                         btn_text,
-                        bgcolor=btn_color,
+                        bgcolor=ft.Colors.RED,
                         color=ft.Colors.WHITE,
                         on_click=toggle_color,
                     ),
