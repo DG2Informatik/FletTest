@@ -20,7 +20,7 @@ def ColorSwitcher() -> ft.Container:
         content=ft.Stack(
             controls=[
                 ft.Text(
-                    "1. FC Bayern München",
+                    "FC Bayern München",
                     size=48,
                     weight=ft.FontWeight.BOLD,
                     color=title_color,
