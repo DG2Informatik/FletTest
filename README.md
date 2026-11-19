@@ -85,6 +85,12 @@ uv sync
 uv run flet run main_imperativ.py
 ```
 
+Die Hübner-Bräu-Ansicht startest du im Projektordner so:
+
+```bash
+uv run flet run Linus/LinusHB.py
+```
+
 - Die App öffnet sich als **eigenes Fenster** auf deinem Rechner
 - **Speichern = App aktualisiert sich sofort** (Hot Reload)
 
