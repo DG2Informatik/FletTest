@@ -8,7 +8,17 @@
     {
       "id": "1c233288-be3b-410a-8ff6-438f3bdfad00",
       "title": "To Do",
-      "cards": []
+      "cards": [
+        {
+          "id": "79785d1c-63b6-4ee8-ab7f-885f9e56a37d",
+          "listId": "1c233288-be3b-410a-8ff6-438f3bdfad00",
+          "title": "Theo - Test",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
     },
     {
       "id": "fa4ad311-ee4e-421c-84c7-4102035e3093",
