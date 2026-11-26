@@ -10,24 +10,6 @@
       "title": "To Do",
       "cards": [
         {
-          "id": "79785d1c-63b6-4ee8-ab7f-885f9e56a37d",
-          "listId": "1c233288-be3b-410a-8ff6-438f3bdfad00",
-          "title": "Theo - Test",
-          "description": "",
-          "labels": [],
-          "checkboxes": [],
-          "comments": []
-        },
-        {
-          "id": "fd0c0710-b61d-4a0d-ae9e-ac34c5ed8f1a",
-          "listId": "1c233288-be3b-410a-8ff6-438f3bdfad00",
-          "title": "Linus - Test",
-          "description": "",
-          "labels": [],
-          "checkboxes": [],
-          "comments": []
-        },
-        {
           "id": "509c0ec4-c52b-4871-a769-5a7ac9a5cafc",
           "listId": "1c233288-be3b-410a-8ff6-438f3bdfad00",
           "title": "Joseph P-Seminar",
