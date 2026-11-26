@@ -10,16 +10,30 @@ def ClubFangesang() -> ft.Container:
     page_index, set_page_index = ft.use_state(0)
 
     def show_next(e: ft.ControlEvent) -> None:
-        set_page_index((page_index + 1) % 3)
+        set_page_index((page_index + 1) % 5)
 
     texts = (
-        "Auswärts nur dabei",
-        "Im Schutz der Polizei",
-        "Scheiße Kleeblatt Fürth",
+        "Seht die Fahnen wehn",
+        "Wir wolln euch Siegen sehn",
+        "Alle im Stadion singen im Chor",
+        "Treiben die Mannschaft bis zum Tor",
+        "Ohohoho Ohohoho Ohohoho",
     )
-    backgrounds = (ft.Colors.RED_900, ft.Colors.WHITE, ft.Colors.BLACK)
-    text_colors = (ft.Colors.WHITE, ft.Colors.BLACK, ft.Colors.WHITE)
-    button_color = ft.Colors.RED_900 if page_index == 2 else ft.Colors.BLACK
+    backgrounds = (
+        ft.Colors.RED_900,
+        ft.Colors.BLACK,
+        ft.Colors.RED_900,
+        ft.Colors.BLACK,
+        ft.Colors.RED_900,
+    )
+    text_colors = (
+        ft.Colors.WHITE,
+        ft.Colors.WHITE,
+        ft.Colors.WHITE,
+        ft.Colors.WHITE,
+        ft.Colors.WHITE,
+    )
+    button_color = ft.Colors.BLACK if page_index % 2 == 0 else ft.Colors.RED_900
 
     content = ft.Stack(
         controls=[
